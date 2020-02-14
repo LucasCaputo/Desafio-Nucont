@@ -1,4 +1,4 @@
-function ParseFloat(string){
+function convertFloat(string){
     string = parseFloat(string.trim().replace(/([^\d,])+/gim, '').replace(',','.'))
     return string
 }
@@ -18,13 +18,13 @@ function extract(str){
         }
         m.forEach((match, groupIndex) => {
 
-            groupIndex == 1? classifier = ParseFloat(clearClassifier(match)):0
+            groupIndex == 1? classifier = convertFloat(clearClassifier(match)):0
             groupIndex == 2? parent = match:0
             groupIndex == 3? description = match.trim():0                  
-            groupIndex == 6? openingBalance = ParseFloat(match):0
-            groupIndex == 8? debit = ParseFloat(match):0
-            groupIndex == 9? credit =ParseFloat(match):0
-            groupIndex == 11? finalBalance =ParseFloat(match):0
+            groupIndex == 6? openingBalance = convertFloat(match):0
+            groupIndex == 8? debit = convertFloat(match):0
+            groupIndex == 9? credit =convertFloat(match):0
+            groupIndex == 11? finalBalance =convertFloat(match):0
             
         });            
             array.push({
