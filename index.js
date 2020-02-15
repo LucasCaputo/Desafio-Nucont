@@ -296,9 +296,8 @@ function extract(str){
                 credit,
                 finalBalance,              
         })
-
-       console.log(array)
     }
+    console.log(array)
 }
 
 extract(str1)
